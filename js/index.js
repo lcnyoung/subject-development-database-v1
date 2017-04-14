@@ -52,13 +52,17 @@ $(function(){
         show();
     }
     
+    var w = $(window).width();
     $(window).resize(function(){
-        var w = $(window).width();
+        w = $(window).width();
         if(w >= 960){
             hide();
         } else{
             show();
         }
+        
+        
+       
     })
     
     function hide(){
@@ -96,8 +100,6 @@ $(function(){
     })
     
     //map
-    	
-    
     $(".btn").on("click",function(){
         $(".map").fadeIn();
         $(".close").fadeIn();
@@ -113,15 +115,24 @@ $(function(){
           position : point,    // 指定文本标注所在的地理位置
           offset   : new BMap.Size(-30, 0)    //设置文本偏移量
         }
-	    var label = new BMap.Label("欣才IT学院", opts);  // 创建文本标注对象
-		label.setStyle({
-			 color : "red",
-			 fontSize : "12px",
-			 height : "20px",
-			 lineHeight : "20px",
-			 fontFamily:"微软雅黑"
-		 });
-	    map.addOverlay(label);   
+        var label = new BMap.Label("欣才IT学院", opts);  // 创建文本标注对象
+        label.setStyle({
+             color : "red",
+             fontSize : "12px",
+             height : "20px",
+             lineHeight : "20px",
+             fontFamily:"微软雅黑"
+         });
+        map.addOverlay(label);  
+        $(window).on("resize", function () {
+             var loadCount = 1;
+             map.addEventListener("tilesloaded", function () {
+             if (loadCount == 1) {
+                map.setCenter(point);
+             }
+             loadCount = loadCount + 1;
+             });
+        })
     })
     $(".close").on("click",function(){
         $(this).fadeOut();
