@@ -18,12 +18,12 @@ $(function(){
     
     function tab(i,h){
         $(".tab").eq(i).on("click",function(){
-            $("body").stop(true).animate({"scrollTop":h})
+            $("body,html").stop(true).animate({"scrollTop":h},500)
         }) 
     }
     //back to top 
         $(".btt").on("click",function(){
-            $("body").stop(true).animate({"scrollTop":20})
+            $("body,html").stop(true).animate({"scrollTop":20},500)
         })
         $(window).scroll(function(){
             if($(window).scrollTop() >= h1){

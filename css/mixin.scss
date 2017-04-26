@@ -1,0 +1,29 @@
+@mixin circle($val){       //public style for circular div
+    border-radius: $val;
+    -o-border-radius: $val;
+    -moz-border-radius: $val;
+    -webkit-border-radius: $val;
+    -ms-border-radius: $val;
+}
+
+@mixin tran($val){               //public style for fliping vertical
+    -ms-transform:rotateX($val);
+    -moz-transform:rotateX($val);
+    -webkit-transform:rotateX($val);
+    -o-transform:rotateX($val);
+    transform:rotateX($val);
+}
+@mixin colorch($a,$b,$c){        //public style for color changing slowly
+    transition:$a $b $c;
+    -ms-transition:$a $b $c;
+    -o-transition:$a $b $c;
+    -webkit-transition:$a $b $c;
+    -moz-transition:$a $b $c;
+}
+@mixin shadow{
+    box-shadow: 1px 1px 3px 3px #0a223a;
+    -ms-box-shadow: 1px 1px 3px 3px #0a223a;
+    -o-box-shadow: 1px 1px 3px 3px #0a223a;
+    -webkit-box-shadow: 1px 1px 3px 3px #0a223a;
+    -moz-box-shadow: 1px 1px 3px 3px #0a223a;
+}

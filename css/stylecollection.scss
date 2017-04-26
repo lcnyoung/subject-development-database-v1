@@ -1,4 +1,5 @@
 @import url(font_s28jkcjez1pjh5mi/iconfont.css);
+@import "mixin";
 *{
     padding: 0;
     margin: 0;
@@ -10,35 +11,7 @@ html,body{
     background-size: cover;
     font-size: 62.5%;
 }
-@mixin circle($val){       //public style for circular div
-    border-radius: $val;
-    -o-border-radius: $val;
-    -moz-border-radius: $val;
-    -webkit-border-radius: $val;
-    -ms-border-radius: $val;
-}
 
-@mixin tran($val){               //public style for fliping vertical
-    -ms-transform:rotateX($val);
-    -moz-transform:rotateX($val);
-    -webkit-transform:rotateX($val);
-    -o-transform:rotateX($val);
-    transform:rotateX($val);
-}
-@mixin colorch($a,$b,$c){        //public style for color changing slowly
-    transition:$a $b $c;
-    -ms-transition:$a $b $c;
-    -o-transition:$a $b $c;
-    -webkit-transition:$a $b $c;
-    -moz-transition:$a $b $c;
-}
-@mixin shadow{
-    box-shadow: 1px 1px 3px 3px #0a223a;
-    -ms-box-shadow: 1px 1px 3px 3px #0a223a;
-    -o-box-shadow: 1px 1px 3px 3px #0a223a;
-    -webkit-box-shadow: 1px 1px 3px 3px #0a223a;
-    -moz-box-shadow: 1px 1px 3px 3px #0a223a;
-}
 li{
     list-style: square;
 }
@@ -58,8 +31,8 @@ a{
         height: 51px;
         margin: 1% 7% 0 3.5%;
         background: url(../images/sprite.png) no-repeat;
-        background-position: 0 -165px;
-        background-size: 115%;
+        background-position: 0 -115px;
+//        background-size: 115%;
         float: left;
     }
     .title{
@@ -114,6 +87,13 @@ a{
     height: 807px;
     margin-top: 78px;
     background: rgba(0,48,91,0.7);
+//    background: #00305b;
+//    -khtml-opacity:0.6;
+//    -moz-opacity:0.6;
+//    filter:alpha(opacity=60);
+//    filter:"alpha(opacity=60)";
+//    opacity:0.6; 
+//    filter: progid:DXImageTransform.Microsoft.Alpha(opacity=70);
     .con-sdd{
         width: auto;
         height: auto;
@@ -270,6 +250,13 @@ a{
     height: 410px;
     width: 100%;
     background: rgba(0,48,91,0.4);
+//    background: #00305b;
+//    -khtml-opacity:0.4;
+//    -moz-opacity:0.4;
+//    filter:alpha(opacity=40);
+//    filter:"alpha(opacity=40)";
+//    opacity:0.4; 
+//    filter: progid:DXImageTransform.Microsoft.Alpha(opacity=40);
 }
 .SR{                     //short for Subject Resource
     height: 796px;
@@ -382,7 +369,15 @@ a{
     .cu-l{
         width: 43%;
         height: 100%;
+        
         background: rgba(0,48,91,0.9);
+//        background: #00305b;
+//        -khtml-opacity:0.9;
+//        -moz-opacity:0.9;
+//        filter:alpha(opacity=90);
+//        filter:"alpha(opacity=90)";
+//        opacity:0.9; 
+//        filter: progid:DXImageTransform.Microsoft.Alpha(opacity=90);
         float: left;
         .name{
             width: 446px;
@@ -403,6 +398,13 @@ a{
         width: 57%;
         height: 100%;
         background: rgba(0,48,91,0.7);
+//        background: #00305b;
+//        -khtml-opacity:0.7;
+//        -moz-opacity:0.7;
+//        filter:alpha(opacity=70);
+//        filter:"alpha(opacity=70)";
+//        opacity:0.7; 
+//        filter: progid:DXImageTransform.Microsoft.Alpha(opacity=70);
         float: left;
         .add{
             width: 500px;
